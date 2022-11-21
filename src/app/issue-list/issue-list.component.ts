@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Issue } from '../issue';
-import { IssuesService } from '../issues.service'
+import { IssuesService } from '../issues.service';
+import { mockedIssues } from '../mocked/mock-issue';
 @Component({
   selector: 'app-issue-list',
   templateUrl: './issue-list.component.html',
@@ -18,7 +19,7 @@ export class IssueListComponent implements OnInit {
   }
 
   private getIssues() {
-    this.issues = this.issueService.getPendingIssues()
+    this.issues = mockedIssues; /*this.issueService.getPendingIssues()*/
   }
 
 }
