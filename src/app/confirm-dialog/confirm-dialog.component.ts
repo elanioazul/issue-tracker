@@ -15,4 +15,14 @@ export class ConfirmDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  agree() {
+    this.confirm.emit(true);
+    this.issueNo = null;
+  }
+
+  disagree() {
+    this.confirm.emit(false);
+    this.issueNo = null;
+  }
+
 }
