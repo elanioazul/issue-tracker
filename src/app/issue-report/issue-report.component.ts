@@ -17,10 +17,10 @@ export class IssueReportComponent implements OnInit {
 
   ngOnInit(): void {
     this.issueForm = this.builder.group({
-      title: [''],
+      title: ['', Validators.required],
       description: [''],
-      priority: [''],
-      type: ['']
+      priority: ['', Validators.required],
+      type: ['', Validators.required]
     })
   }
 
