@@ -8,9 +8,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class IssueReportComponent implements OnInit {
 
+  issueForm: FormGroup | undefined;
+
   constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.issueForm = this.builder.group({
+      title: [''],
+      description: [''],
+      priority: [''],
+      type: ['']
+    })
   }
 
 }
