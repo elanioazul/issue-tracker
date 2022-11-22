@@ -9,6 +9,8 @@ import { mockedIssues } from '../mocked/mock-issue';
 })
 export class IssueListComponent implements OnInit {
 
+  showReportIssue = false;
+
   public issues: Issue[] = [];
 
   constructor(private issueService: IssuesService) {
@@ -16,6 +18,11 @@ export class IssueListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIssues()
+  }
+
+  onCloseReport() {
+    this.showReportIssue = false;
+    this.getIssues();
   }
 
   private getIssues() {
