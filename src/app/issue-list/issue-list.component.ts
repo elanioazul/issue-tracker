@@ -26,7 +26,7 @@ export class IssueListComponent implements OnInit {
   }
 
   private getIssues() {
-    this.issues = mockedIssues; /*this.issueService.getPendingIssues()*/
+    this.issues = /*mockedIssues;*/ this.issueService.getPendingIssues()
   }
 
 }
